@@ -1,0 +1,965 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VITAL 05 • All Natural Biostimulant (Plants & Animals)</title>
+  <meta name="description" content="VITAL 05 is an all-natural biostimulant for plants and animals, developed by Divine Winners Company Limited." />
+
+  <!--
+    QUICK SETUP
+    1) Save this as: index.html
+    2) Create folders: assets/  downloads/
+    3) Put your images in assets/ with these names:
+       - assets/vital05-logo.jpg
+       - assets/divine-winners-logo.jpg
+       - assets/vital05-bottle-1l.jpg
+       - assets/vital05-jerrycan-5l.jpg
+       - assets/vital05-jerrycan-20l.jpg   (optional)
+    4) Put your PDFs/manual in downloads/ with these names (or change links below):
+       - downloads/VITAL05-Product-Manual.pdf
+       - downloads/University-of-Ghana-Lettuce-Trial.pdf
+       - downloads/VITAL05-Multi-Crop-Assessment.pdf
+       - downloads/Company-Profile-Divine-Winners.pdf
+  -->
+
+  <style>
+    :root{
+      --lime:#B8FF3D;
+      --lime-2:#7CFF00;
+      --sea:#0E8AA8;
+      --sea-2:#076B83;
+      --ink:#0b1220;
+      --muted:#5d6b82;
+      --bg:#f6fbff;
+      --card:#ffffff;
+      --shadow: 0 18px 45px rgba(10,30,60,.10);
+      --radius: 18px;
+      --radius-lg: 26px;
+      --max: 1140px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 700px at 10% -10%, rgba(184,255,61,.25), transparent 55%),
+        radial-gradient(900px 600px at 90% 0%, rgba(14,138,168,.20), transparent 60%),
+        linear-gradient(180deg, #ffffff 0%, var(--bg) 55%, #ffffff 100%);
+    }
+
+    a{color:inherit; text-decoration:none}
+    img{max-width:100%; display:block}
+
+    .container{max-width:var(--max); margin:0 auto; padding:0 18px}
+
+    /* Top bar */
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,.78);
+      border-bottom: 1px solid rgba(10,30,60,.06);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:14px;
+    }
+    .brand{display:flex; align-items:center; gap:12px; min-width:220px}
+    .brand-mark{
+  width:100px;              /* bigger container */
+  height:150px;             /* fixed visible height */
+  background: transparent;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:none;
+}
+
+.brand-mark img{
+  height:100px;             /* logo height */
+  width:auto;              /* keep aspect ratio */
+  max-width:100%;
+  object-fit:contain;
+}
+
+
+
+    .brand-mark img{width:100%; height:100%; object-fit:cover}
+    .brand h1{font-size:14px; line-height:1.1; margin:0}
+    .brand small{display:block; color:var(--muted); font-weight:600; margin-top:2px}
+
+    .navlinks{display:flex; gap:14px; align-items:center; flex-wrap:wrap; justify-content:flex-end}
+    .navlinks a{
+      font-size:13px; font-weight:800;
+      color: rgba(11,18,32,.76);
+      padding:10px 10px;
+      border-radius: 12px;
+    }
+    .navlinks a:hover{background: rgba(14,138,168,.08)}
+
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding:12px 16px;
+      border-radius: 999px;
+      font-weight:900;
+      font-size:13px;
+      border:1px solid rgba(10,30,60,.12);
+      background:#fff;
+      box-shadow: 0 14px 30px rgba(10,30,60,.08);
+      cursor:pointer;
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+    }
+    .btn:hover{transform: translateY(-1px); border-color: rgba(14,138,168,.35); box-shadow: 0 18px 40px rgba(10,30,60,.12)}
+    .btn.primary{
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--lime-2), var(--sea));
+      color:#08111f;
+    }
+
+    .mobile-toggle{display:none}
+
+    /* Hero */
+    .hero{padding:34px 0 20px}
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:22px;
+      align-items:stretch;
+    }
+
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 12px;
+      background: rgba(184,255,61,.18);
+      border:1px solid rgba(184,255,61,.35);
+      border-radius: 999px;
+      font-weight:900;
+      color: rgba(11,18,32,.85);
+      font-size:13px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:99px;
+      background: linear-gradient(135deg, var(--lime-2), var(--sea));
+      box-shadow: 0 10px 20px rgba(14,138,168,.20);
+    }
+
+    .hero h2{
+      margin:14px 0 10px;
+      font-size: clamp(28px, 4.2vw, 46px);
+      line-height:1.05;
+      letter-spacing:-.02em;
+    }
+    .hero p{
+      margin:0;
+      color: rgba(11,18,32,.72);
+      font-weight:650;
+      font-size: 15px;
+      line-height:1.6;
+      max-width: 58ch;
+    }
+
+    .hero-cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
+
+    .stats{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:12px;
+    }
+    .stat{
+      background: rgba(255,255,255,.75);
+      border: 1px solid rgba(10,30,60,.08);
+      border-radius: var(--radius);
+      padding:14px;
+      box-shadow: 0 14px 40px rgba(10,30,60,.06);
+    }
+    .stat b{display:block; font-size:18px}
+    .stat span{display:block; margin-top:4px; color:var(--muted); font-weight:800; font-size:12px}
+
+    .hero-card{
+      background: linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,.65));
+      border: 1px solid rgba(10,30,60,.10);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .hero-card::before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(900px 400px at 0% 0%, rgba(184,255,61,.35), transparent 55%),
+                  radial-gradient(700px 420px at 100% 20%, rgba(14,138,168,.28), transparent 60%);
+      pointer-events:none;
+    }
+    .hero-card-inner{position:relative; padding:18px}
+
+    .product-visual{
+      border-radius: 20px;
+      background: rgba(255,255,255,.65);
+      border: 1px dashed rgba(14,138,168,.25);
+      padding:12px;
+      display:grid;
+      gap:10px;
+    }
+
+    .logo-row{display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap}
+    .logo-tile{
+      background: rgba(255,255,255,.80);
+      border: 1px solid rgba(10,30,60,.10);
+      border-radius: 16px;
+      padding:10px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:56px;
+      flex: 1 1 160px;
+    }
+    .logo-tile img{max-height:42px; width:auto; object-fit:contain}
+
+    .product-grid{display:grid; grid-template-columns: 1fr 1fr; gap:10px; align-items:stretch}
+    .photo{
+      background: rgba(255,255,255,.80);
+      border: 1px solid rgba(10,30,60,.10);
+      border-radius: 18px;
+      padding:10px;
+      display:grid;
+      place-items:center;
+      aspect-ratio: 4 / 3;
+      overflow:hidden;
+    }
+    .photo img{width:100%; height:100%; object-fit:contain}
+
+
+    .product-grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:16px;
+  height: 300px;            
+}
+
+.product-grid .photo{
+  height:100%;              
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.product-grid .photo img{
+  height:100%;               
+  width:auto;
+  object-fit:contain;         
+}
+
+
+
+
+
+
+
+
+    .badge-row{display:flex; gap:10px; flex-wrap:wrap}
+    .pill{
+      padding:8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(10,30,60,.12);
+      background: rgba(255,255,255,.75);
+      font-weight:900;
+      font-size:12px;
+      color: rgba(11,18,32,.72);
+    }
+
+    section{padding:50px 0}
+    .section-title{display:flex; align-items:flex-end; justify-content:space-between; gap:14px; margin-bottom:18px}
+    .section-title h3{margin:0; font-size:22px; letter-spacing:-.01em}
+    .section-title p{margin:0; color:var(--muted); font-weight:800; font-size:13px; max-width:70ch}
+
+    .grid-3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
+    .grid-2{display:grid; grid-template-columns: repeat(2, 1fr); gap:14px}
+
+    .card{
+      background: var(--card);
+      border: 1px solid rgba(10,30,60,.10);
+      border-radius: var(--radius);
+      box-shadow: 0 14px 40px rgba(10,30,60,.06);
+      padding:16px;
+    }
+    .card h4{margin:0 0 8px; font-size:15px}
+    .card p{margin:0; color: rgba(11,18,32,.70); font-weight:650; line-height:1.6; font-size:13px}
+
+    .icon{width:42px; height:42px; border-radius: 14px; background: rgba(14,138,168,.10); border: 1px solid rgba(14,138,168,.20); display:grid; place-items:center; margin-bottom:10px}
+    .icon svg{width:22px; height:22px}
+
+    .tabs{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:14px}
+    .tab{padding:10px 12px; border-radius: 999px; border:1px solid rgba(10,30,60,.12); background: rgba(255,255,255,.72); font-weight:950; font-size:12px; cursor:pointer}
+    .tab[aria-selected="true"]{border-color: transparent; background: linear-gradient(135deg, rgba(184,255,61,.90), rgba(14,138,168,.25)); box-shadow: 0 18px 40px rgba(10,30,60,.10)}
+    .panel{display:none}
+    .panel.active{display:block}
+
+    details{background: rgba(255,255,255,.75); border: 1px solid rgba(10,30,60,.10); border-radius: var(--radius); padding:14px; box-shadow: 0 14px 40px rgba(10,30,60,.05)}
+    details + details{margin-top:10px}
+    summary{cursor:pointer; font-weight:950}
+    details p{margin:10px 0 0; color: rgba(11,18,32,.72); font-weight:700; line-height:1.6}
+
+    /* Products */
+    .product-cards{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
+    .prod{
+      background: rgba(255,255,255,.85);
+      border: 1px solid rgba(10,30,60,.10);
+      border-radius: var(--radius);
+      box-shadow: 0 14px 40px rgba(10,30,60,.06);
+      overflow:hidden;
+    }
+    .prod .img{aspect-ratio: 16/11; background: rgba(14,138,168,.06); display:grid; place-items:center; padding:12px}
+    .prod .img img{width:100%; height:100%; object-fit:contain}
+    .prod .body{padding:14px}
+    .prod .body h4{margin:0 0 6px}
+    .prod .meta{margin-top:10px; display:flex; flex-wrap:wrap; gap:8px}
+
+    /* Dealer locator */
+    .toolbar{display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between; margin-bottom:12px}
+    .input{
+      width:min(520px, 100%);
+      padding:12px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(10,30,60,.14);
+      outline:none;
+      background: rgba(255,255,255,.85);
+      font-weight:750;
+    }
+    .select{
+      padding:12px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(10,30,60,.14);
+      outline:none;
+      background: rgba(255,255,255,.85);
+      font-weight:800;
+    }
+    .dealer-grid{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
+    .dealer{background: rgba(255,255,255,.85); border: 1px solid rgba(10,30,60,.10); border-radius: var(--radius); box-shadow: 0 14px 40px rgba(10,30,60,.06); padding:14px}
+    .dealer b{display:block; font-size:14px}
+    .dealer small{display:block; color:var(--muted); font-weight:800; margin-top:4px}
+    .dealer .line{margin-top:10px; font-weight:750; color: rgba(11,18,32,.72); font-size:13px; line-height:1.5}
+
+    /* Downloads */
+    .download-grid{display:grid; grid-template-columns: repeat(2, 1fr); gap:14px}
+    .dl{display:flex; gap:12px; align-items:flex-start}
+    .dl .badge{width:46px; height:46px; border-radius:16px; display:grid; place-items:center; background: rgba(184,255,61,.18); border:1px solid rgba(184,255,61,.35)}
+    .dl .badge svg{width:22px; height:22px}
+
+    footer{padding:32px 0; border-top:1px solid rgba(10,30,60,.08); background: rgba(255,255,255,.65)}
+    .footer-grid{display:grid; grid-template-columns: 1.2fr .8fr; gap:14px}
+    .fine{color: rgba(11,18,32,.62); font-weight:700; font-size:12px; line-height:1.6}
+
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr}
+      .navlinks{display:none; width:100%}
+      .navlinks.open{display:flex; justify-content:flex-start}
+      .mobile-toggle{display:inline-flex}
+      .brand{min-width:auto}
+      .product-grid{grid-template-columns:1fr}
+      .product-cards{grid-template-columns:1fr}
+      .dealer-grid{grid-template-columns:1fr}
+      .download-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="#top">
+          <div class="brand-mark" aria-hidden="true"><img src="/assets//vital05-logo.png" alt="VITAL 05 logo" /></div>
+          <div>
+            <h1>VITAL 05</h1>
+            <small>All Natural Biostimulant • Divine Winners Company Ltd</small>
+          </div>
+        </a>
+
+        <button class="btn mobile-toggle" id="menuBtn" aria-label="Toggle menu">Menu</button>
+
+        <nav class="navlinks" id="navLinks" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#products">Products</a>
+          <a href="#benefits">Benefits</a>
+          <a href="#use">How to Use</a>
+          <a href="#dealers">Dealers</a>
+          <a href="#downloads">Downloads</a>
+          <a class="btn primary" href="#contact">Contact / Order</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <main id="top" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="kicker"><span class="dot" aria-hidden="true"></span> Organic • Safe • Sustainable</div>
+          <h2>Boost growth, yield & resilience —
+            <span style="background: linear-gradient(135deg, var(--sea), var(--lime-2)); -webkit-background-clip:text; background-clip:text; color:transparent;">for plants and animals</span>
+          </h2>
+          <p>
+            VITAL 05 is a natural biostimulant concentrate produced from plant extracts through a natural fermentation process.
+            It supports seed germination, root development, photosynthesis, flowering and fruiting — and also serves as a nutrient-rich supplement for livestock.
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn primary" href="#use">View Application Rates</a>
+            <a class="btn" href="#downloads">Download Manual</a>
+          </div>
+
+          <div class="stats" aria-label="Highlights">
+            <div class="stat"><b>Triacontanol + Brassinosteroids</b><span>Growth regulators supporting vigor & productivity</span></div>
+            <div class="stat"><b>Vitamins • Enzymes</b><span>Supports metabolism, uptake and stress tolerance</span></div>
+            <div class="stat"><b>Plants & Animals</b><span>Crops, seedlings, poultry, livestock & fish</span></div>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Product visuals">
+          <div class="hero-card-inner">
+            <div class="product-visual">
+              <div class="logo-row">
+                <!-- <div class="logo-tile" title="VITAL 05"><img src="/assets/img4.jpeg" alt="VITAL 05 logo" /></div> -->
+                <div class="logo-tile" title="Divine Winners Company Limited"><img src="/assets//img3.jpeg" alt="Divine Winners Company Limited logo" /></div>
+              </div>
+              <div class="product-grid" aria-label="Product photos">
+                <div class="photo"><img src="/assets//img1.png" alt="VITAL 05 1L bottle" /></div>
+                <div class="photo"><img src="/assets//img2.png" alt="VITAL 05 5L jerrycan" /></div>
+                <div class="photo"><img src="/assets/img5.png" alt="VITAL 05 5L jerrycan" /></div>
+              </div>
+              <div class="badge-row">
+                <span class="pill">All Natural Biostimulant</span>
+                <span class="pill">Improves nutrient uptake</span>
+                <span class="pill">Supports immunity & resilience</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-title">
+        <div>
+          <h3>What is VITAL 05?</h3>
+          <p>Developed by <b>Divine Winners Company Limited</b>. An all‑natural biostimulant for plants and a nutrient-rich supplement for animals.</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
+          </div>
+          <h4>Safe, organic & sustainable</h4>
+          <p>Organic and environmentally safe — suitable for continuous use when applied as directed.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19c4-2 6-6 8-14 2 8 4 12 8 14"/><path d="M6 19h12"/></svg>
+          </div>
+          <h4>How it works</h4>
+          <p>Active agents enter via roots and leaves, supporting plant metabolism and nutrient absorption. It can also support beneficial soil microbes and improve overall crop vigor.</p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:14px">
+        <h4>Key components (in crude formulation)</h4>
+        <p>Brassinosteroids, triacontanol, vitamins, enzymes and nutrients including N, P, K, Ca, Mg, Fe, Cu and Zn.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS PAGE (SECTION) -->
+  <section id="products">
+    <div class="container">
+      <div class="section-title">
+        <div>
+          <h3>Products</h3>
+          <p>Choose the pack size that matches your farm size and usage frequency. (Add pricing when ready.)</p>
+        </div>
+      </div>
+
+      <div class="product-cards">
+        <div class="prod">
+          <div class="img"><img src="/assets/img1.png" alt="VITAL 05 1L" /></div>
+          <div class="body">
+            <h4>VITAL 05 • 1 Litre</h4>
+            <p>Ideal for home gardens, small farms, nurseries and trial plots.</p>
+            <div class="meta">
+              <span class="pill">Plants & Animals</span>
+              <span class="pill">Easy handling</span>
+            </div>
+            <div style="margin-top:12px">
+              <a class="btn primary" href="#contact" onclick="prefillQuote('1 Litre'); return false;">Request price</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="prod">
+          <div class="img"><img src="/assets/img2.png" alt="VITAL 05 5L" /></div>
+          <div class="body">
+            <h4>VITAL 05 • 5 Litres</h4>
+            <p>Best for medium farms, vegetable production, and regular spraying programs.</p>
+            <div class="meta">
+              <span class="pill">Best value</span>
+              <span class="pill">Farm use</span>
+            </div>
+            <div style="margin-top:12px">
+              <a class="btn primary" href="#contact" onclick="prefillQuote('5 Litres'); return false;">Request price</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="prod">
+          <div class="img">
+            <!-- Optional image. If you don't have it, keep the same 5L image or add 20L photo later -->
+            <img src="/assets/img5.png" alt="VITAL 05 20L"  />
+          </div>
+          <div class="body">
+            <h4>VITAL 05 • 20 Litres</h4>
+            <p>Recommended for large farms, dealers, cooperatives, and bulk supply.</p>
+            <div class="meta">
+              <span class="pill">Bulk</span>
+              <span class="pill">Dealer-ready</span>
+            </div>
+            <div style="margin-top:12px">
+              <a class="btn primary" href="#contact" onclick="prefillQuote('20 Litres'); return false;">Request price</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:14px">
+        <h4>Need dealer supply?</h4>
+        <p>We support agro-shops and distributors with bulk ordering. Use the <a href="#dealers"><b>Dealer Locator</b></a> to find the nearest outlet or contact us to become a dealer.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="benefits">
+    <div class="container">
+      <div class="section-title">
+        <div>
+          <h3>Benefits</h3>
+          <p>Select the category that matches your production (plants, livestock, poultry, fish/aquaculture).</p>
+        </div>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Benefits tabs">
+        <button class="tab" role="tab" aria-selected="true" aria-controls="panel-plants" id="tab-plants">Plants</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="panel-livestock" id="tab-livestock">Livestock</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="panel-poultry" id="tab-poultry">Poultry</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="panel-fish" id="tab-fish">Fish & Aquaculture</button>
+      </div>
+
+      <div class="panel active" id="panel-plants" role="tabpanel" aria-labelledby="tab-plants">
+        <div class="grid-3">
+          <div class="card"><h4>Faster growth & higher yield</h4><p>Promotes vigorous vegetative growth, flowering and fruit development for improved productivity.</p></div>
+          <div class="card"><h4>Improved nutrient uptake</h4><p>Enhances absorption of water and nutrients; can improve soil structure and infiltration.</p></div>
+          <div class="card"><h4>Stress & resistance</h4><p>Supports immunity, improves drought tolerance, and enhances resilience to pests and diseases.</p></div>
+        </div>
+      </div>
+
+      <div class="panel" id="panel-livestock" role="tabpanel" aria-labelledby="tab-livestock">
+        <div class="grid-3">
+          <div class="card"><h4>Nutritional support</h4><p>Provides vitamins and minerals to support general health and vitality.</p></div>
+          <div class="card"><h4>Better digestion</h4><p>Supports gut function and nutrient absorption for improved feed utilization.</p></div>
+          <div class="card"><h4>Performance support</h4><p>Supports growth and overall condition, especially during stress periods.</p></div>
+        </div>
+      </div>
+
+      <div class="panel" id="panel-poultry" role="tabpanel" aria-labelledby="tab-poultry">
+        <div class="grid-3">
+          <div class="card"><h4>Gut health</h4><p>Supports digestive balance and helps improve feed conversion efficiency.</p></div>
+          <div class="card"><h4>Productivity</h4><p>Supports growth and general performance for improved outcomes.</p></div>
+          <div class="card"><h4>Natural immunity support</h4><p>Supports resilience and can help reduce losses.</p></div>
+        </div>
+      </div>
+
+      <div class="panel" id="panel-fish" role="tabpanel" aria-labelledby="tab-fish">
+        <div class="grid-3">
+          <div class="card"><h4>Growth & metabolism</h4><p>Supports natural growth and metabolism for stronger fish performance.</p></div>
+          <div class="card"><h4>Water quality & stress</h4><p>Helps improve pond conditions and reduce stress in aquaculture systems.</p></div>
+          <div class="card"><h4>Disease resistance</h4><p>Supports immune response and resilience to common aquaculture challenges.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="use">
+    <div class="container">
+      <div class="section-title">
+        <div>
+          <h3>Application rates & directions</h3>
+          <p>Use freshly prepared solution. Best applied early morning or late afternoon. Avoid extreme heat or heavy rain.</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h4>Plants</h4>
+          <details open>
+            <summary>Seed treatment (before planting)</summary>
+            <p><b>Dilution:</b> 20 mL in 15 L clean water. <b>Method:</b> soak seeds ~2 minutes (if required) or spray/coat evenly; air‑dry in shade before planting.</p>
+          </details>
+          <details>
+            <summary>Seedlings</summary>
+            <p><b>Dilution:</b> 50 mL in 15 L clean water. <b>Method:</b> foliar spray or soil drench. <b>Frequency:</b> every 7–14 days.</p>
+          </details>
+          <details>
+            <summary>Horticultural & vegetable crops</summary>
+            <p><b>Dilution:</b> 100 mL in 15 L clean water (per acre). <b>Method:</b> foliar spray or soil drench. <b>Frequency:</b> every 14–21 days.</p>
+          </details>
+          <details>
+            <summary>Tree crops</summary>
+            <p><b>Dilution:</b> 100–150 mL in 15 L clean water (per acre). <b>Method:</b> foliar spray or soil drench. <b>Frequency:</b> every 14–21 days.</p>
+          </details>
+        </div>
+
+        <div class="card">
+          <h4>Animals</h4>
+          <details open>
+            <summary>Livestock (water / feed)</summary>
+            <p><b>Water use:</b> 5 mL per 1 L drinking water. <b>Feed mix:</b> 1 L per 100 kg dry feed. <b>Frequency:</b> daily or during stress.</p>
+          </details>
+          <details>
+            <summary>Poultry (water / feed)</summary>
+            <p><b>Water use:</b> 2 mL per 1 L drinking water. <b>Feed mix:</b> 1 L per ton of feed. <b>Frequency:</b> 5–7 days/month or as needed.</p>
+          </details>
+          <details>
+            <summary>Fish & aquaculture (pond / feed)</summary>
+            <p><b>Pond treatment:</b> dilute and apply every 14 days (follow label guidance). <b>Feed additive:</b> 5 mL per kg fish feed, with daily feeding.</p>
+          </details>
+
+          <div class="card" style="margin-top:14px; background: rgba(184,255,61,.10)">
+            <h4 style="margin-bottom:6px">Pro tips</h4>
+            <p>Apply once plants have enough leaves for good absorption. If using fertilizer, apply VITAL 05 at least 7 days before fertilizer to stimulate root growth first.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISTRIBUTOR / DEALER LOCATOR -->
+  <section id="dealers">
+    <div class="container">
+      <div class="section-title">
+        <div>
+          <h3>Distributor / Dealer locator</h3>
+          <p>Search by region, town or dealer name. (Replace the sample dealer list with your real outlets.)</p>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <input id="dealerSearch" class="input" placeholder="Search dealers (e.g., Kumasi, Accra, Tamale, Agro Shop)…" />
+        <select id="regionFilter" class="select" aria-label="Filter by region">
+          <option value="">All regions</option>
+        </select>
+      </div>
+
+      <div id="dealerGrid" class="dealer-grid" aria-live="polite"></div>
+
+      <div class="card" style="margin-top:14px">
+        <h4>Become a dealer</h4>
+        <p>Call <b>0201733539</b> / <b>0241709034</b> or email <b>divinewinnerscompany@gmail.com</b> to apply as an agro-dealer/distributor.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOADS PAGE (SECTION) -->
+  <section id="downloads">
+    <div class="container">
+      <div class="section-title">
+        <div>
+          <h3>Downloads</h3>
+          <p>Product manual and supporting reports. Upload your files to the <b>downloads/</b> folder and keep the same filenames (or edit the links).</p>
+        </div>
+      </div>
+
+      <div class="download-grid">
+        <div class="card dl">
+          <div class="badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+          </div>
+          <div>
+            <h4 style="margin:0 0 6px">VITAL 05 Product Manual</h4>
+            <p>Directions, application rates and safety guidance.</p>
+            <div style="margin-top:10px"><a class="btn primary" href="downloads/DOC-20250128-WA0007..pdf" download>Download PDF</a></div>
+          </div>
+        </div>
+
+        <div class="card dl">
+          <div class="badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+          </div>
+          <div>
+            <h4 style="margin:0 0 6px">University of Ghana — Lettuce Trial</h4>
+            <p>Efficacy report and recommended cost-effective rate.</p>
+            <div style="margin-top:10px"><a class="btn primary" href="downloads/DOC-20250128-WA0007..pdf" download>Download PDF</a></div>
+          </div>
+        </div>
+
+        <div class="card dl">
+          <div class="badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+          </div>
+          <div>
+            <h4 style="margin:0 0 6px">VITAL 05 Multi‑Crop Assessment</h4>
+            <p>Findings across multiple crops and application rates.</p>
+            <div style="margin-top:10px"><a class="btn primary" href="downloads/DOC-20250128-WA0007..pdf" download>Download PDF</a></div>
+          </div>
+        </div>
+
+        <div class="card dl">
+          <div class="badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+          </div>
+          <div>
+            <h4 style="margin:0 0 6px">Divine Winners Company Profile</h4>
+            <p>Company details and product background.</p>
+            <div style="margin-top:10px"><a class="btn primary" href="downloads/VITAL 05 - MANUAL.docx" download>Download PDF</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:14px">
+        <h4>Want these files protected?</h4>
+        <p>You can host downloads behind a simple form (name + phone) to capture leads before download.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-title">
+        <div>
+          <h3>Contact / Order</h3>
+          <p>Call, WhatsApp or email us for pricing, delivery and distributor enquiries.</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h4>Divine Winners Company Limited</h4>
+          <p>
+            <b>Phone:</b> <a href="tel:+233201733539">0201733539</a>, <a href="tel:+233241709034">0241709034</a><br/>
+            <b>Email:</b> <a href="mailto:divinewinnerscompany@gmail.com">divinewinnerscompany@gmail.com</a><br/>
+            <b>Website:</b> <a href="https://www.divinewinners.com" target="_blank" rel="noopener">www.divinewinners.com</a>
+          </p>
+
+          <div style="margin-top:14px" class="hero-cta">
+            <a class="btn primary" href="#" onclick="openWhatsApp(); return false;">WhatsApp Order</a>
+            <a class="btn" href="mailto:divinewinnerscompany@gmail.com?subject=VITAL%2005%20Order%20%2F%20Enquiry">Email Us</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h4>Request a quote</h4>
+          <p style="margin-bottom:10px">This form generates a WhatsApp-ready message.</p>
+          <form onsubmit="submitQuote(event)">
+            <div style="display:grid; gap:10px">
+              <input required id="qName" name="name" placeholder="Full name" class="input" />
+              <input required id="qPhone" name="phone" placeholder="Phone / WhatsApp" class="input" />
+              <select id="qInterest" name="interest" class="select">
+                <option value="Plants">Plants (crops / seedlings)</option>
+                <option value="Livestock">Livestock</option>
+                <option value="Poultry">Poultry</option>
+                <option value="Fish">Fish & Aquaculture</option>
+                <option value="Dealer">Agro-dealer / Distributor</option>
+              </select>
+              <textarea id="qMessage" name="message" rows="4" placeholder="Tell us your crop/animals, acreage/flock size, location, and preferred pack size…" class="input"></textarea>
+              <button class="btn primary" type="submit">Generate Message</button>
+              <div id="formNote" class="fine" aria-live="polite"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="padding:0">
+            <div class="brand-mark" aria-hidden="true"><img src="assets/vital05-logo.png" alt="VITAL 05" /></div>
+            <div>
+              <h1>VITAL 05</h1>
+              <small>All Natural Biostimulant • Plants & Animals</small>
+            </div>
+          </div>
+          <p class="fine" style="margin-top:10px">
+            © <span id="year"></span> Divine Winners Company Limited. All rights reserved.
+            <br/>Always follow label instructions and professional agronomic guidance.
+          </p>
+        </div>
+
+        <div class="card" style="padding:14px">
+          <h4 style="margin-bottom:6px">Quick links</h4>
+          <p class="fine" style="margin:0">
+            <a href="#products">Products</a> •
+            <a href="#dealers">Dealers</a> •
+            <a href="#downloads">Downloads</a> •
+            <a href="#contact">Contact</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    if(menuBtn){
+      menuBtn.addEventListener('click', ()=> navLinks.classList.toggle('open'));
+    }
+
+    // Tabs
+    const tabs = Array.from(document.querySelectorAll('.tab'));
+    const panels = Array.from(document.querySelectorAll('.panel'));
+    function activateTab(tabId){
+      tabs.forEach(t=> t.setAttribute('aria-selected', (t.id === tabId) ? 'true' : 'false'));
+      panels.forEach(p=> p.classList.remove('active'));
+      const tab = document.getElementById(tabId);
+      const panelId = tab.getAttribute('aria-controls');
+      document.getElementById(panelId).classList.add('active');
+    }
+    tabs.forEach(t=> t.addEventListener('click', ()=> activateTab(t.id)));
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // WhatsApp (default to first number)
+    const WHATSAPP_NUMBER = '233201733539'; // 0201733539
+
+    function openWhatsApp(){
+      const text = encodeURIComponent('Hello Divine Winners Company. I want to order VITAL 05. Please share pricing and availability.');
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, '_blank');
+    }
+
+    function submitQuote(e){
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(e.target).entries());
+      const note = document.getElementById('formNote');
+      const msg = `Quote request (VITAL 05)\nName: ${data.name}\nPhone: ${data.phone}\nInterest: ${data.interest}\nMessage: ${data.message || '-'}\nWebsite: www.divinewinners.com`;
+      note.innerHTML = 'Message ready. Copy and send via WhatsApp:';
+
+      const pre = document.createElement('pre');
+      pre.textContent = msg;
+      pre.style.margin = '10px 0 0';
+      pre.style.whiteSpace = 'pre-wrap';
+      pre.style.padding = '12px';
+      pre.style.borderRadius = '14px';
+      pre.style.border = '1px dashed rgba(10,30,60,.25)';
+      pre.style.background = 'rgba(255,255,255,.65)';
+
+      const existing = note.parentElement.querySelector('pre');
+      if(existing) existing.remove();
+      note.parentElement.appendChild(pre);
+    }
+
+    // Prefill quote from product buttons
+    function prefillQuote(pack){
+      const msg = document.getElementById('qMessage');
+      const interest = document.getElementById('qInterest');
+      if(interest) interest.value = 'Plants';
+      if(msg){
+        const base = msg.value ? (msg.value + "\n") : "";
+        msg.value = base + `Preferred pack size: ${pack}`;
+      }
+      document.getElementById('qName')?.focus();
+      window.location.hash = '#contact';
+    }
+
+    // Dealer locator (sample data — replace with real dealers)
+    const dealers = [
+      { name: 'Divine Winners Main Office', region: 'Ashanti', town: 'Kumasi', phone: '0201733539', address: 'Adum Pampaso', type: 'Direct Sales' },
+      { name: 'GreenGrow Agro Shop', region: 'Greater Accra', town: 'Accra', phone: '0241709034', address: 'Makola (Sample)', type: 'Agro Dealer' },
+      { name: 'Northern Agro Inputs', region: 'Northern', town: 'Tamale', phone: '0200000000', address: 'Central Market (Sample)', type: 'Distributor' },
+      { name: 'Cape Coast Agro Mart', region: 'Central', town: 'Cape Coast', phone: '0200000000', address: 'Kotokraba (Sample)', type: 'Agro Dealer' },
+      { name: 'Sunrise Inputs', region: 'Eastern', town: 'Koforidua', phone: '0200000000', address: 'Main Lorry Station (Sample)', type: 'Agro Dealer' },
+      { name: 'Volta Farm Supplies', region: 'Volta', town: 'Ho', phone: '0200000000', address: 'Market Road (Sample)', type: 'Distributor' },
+    ];
+
+    const dealerGrid = document.getElementById('dealerGrid');
+    const searchBox = document.getElementById('dealerSearch');
+    const regionFilter = document.getElementById('regionFilter');
+
+    function uniqueRegions(){
+      return Array.from(new Set(dealers.map(d => d.region))).sort();
+    }
+
+    function renderRegionOptions(){
+      if(!regionFilter) return;
+      uniqueRegions().forEach(r => {
+        const opt = document.createElement('option');
+        opt.value = r;
+        opt.textContent = r;
+        regionFilter.appendChild(opt);
+      });
+    }
+
+    function matchDealer(d, q, region){
+      const text = `${d.name} ${d.region} ${d.town} ${d.address} ${d.type}`.toLowerCase();
+      const okQuery = !q || text.includes(q);
+      const okRegion = !region || d.region === region;
+      return okQuery && okRegion;
+    }
+
+    function renderDealers(){
+      if(!dealerGrid) return;
+      const q = (searchBox?.value || '').trim().toLowerCase();
+      const region = regionFilter?.value || '';
+
+      const filtered = dealers.filter(d => matchDealer(d, q, region));
+      dealerGrid.innerHTML = '';
+
+      if(filtered.length === 0){
+        dealerGrid.innerHTML = `<div class="card" style="grid-column:1/-1"><h4 style="margin:0 0 6px">No dealers found</h4><p>Try another keyword (town/region) or contact Divine Winners directly.</p></div>`;
+        return;
+      }
+
+      filtered.forEach(d => {
+        const el = document.createElement('div');
+        el.className = 'dealer';
+        el.innerHTML = `
+          <b>${d.name}</b>
+          <small>${d.type} • ${d.town}, ${d.region}</small>
+          <div class="line"><b>Phone:</b> <a href="tel:+233${d.phone.replace(/^0/, '')}">${d.phone}</a></div>
+          <div class="line"><b>Address:</b> ${d.address}</div>
+          <div class="line" style="margin-top:12px">
+            <a class="btn" href="#" onclick="openDealerWhatsApp('${d.phone}', '${d.name}'); return false;">WhatsApp dealer</a>
+          </div>
+        `;
+        dealerGrid.appendChild(el);
+      });
+    }
+
+    function openDealerWhatsApp(phone, dealerName){
+      const number = `233${phone.replace(/^0/, '')}`;
+      const text = encodeURIComponent(`Hello ${dealerName}. I want to buy VITAL 05. Please share price and availability.`);
+      window.open(`https://wa.me/${number}?text=${text}`, '_blank');
+    }
+
+    renderRegionOptions();
+    renderDealers();
+    searchBox?.addEventListener('input', renderDealers);
+    regionFilter?.addEventListener('change', renderDealers);
+  </script>
+</body>
+</html>
